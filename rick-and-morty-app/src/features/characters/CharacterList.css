@@ -1,0 +1,113 @@
+/* Container for the entire carousel */
+.carousel-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #3b3b3b);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Styling for the search input field */
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  background: #444;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Styling for each character card */
+.character-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.character-card h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+/* Hover effects for character cards */
+.character-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.3);
+}
+
+.character-card:hover h3 {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Custom arrows for the carousel */
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 1;
+  color: #000;
+  border: none;
+  font-size: 24px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: rgba(0, 255, 255, 1);
+  color: #000;
+}
+
+/* Custom slider container */
+.slick-slider {
+  position: relative;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.search-input, .character-card h3 {
+  font-family: 'Orbitron', sans-serif;
+}
