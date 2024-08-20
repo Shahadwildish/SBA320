@@ -13,14 +13,16 @@ const CharacterList = () => {
   const { characters, status, error } = useSelector((state) => state.characters);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Debounce function to delay the API request
+  // delay the API request
   const debouncedSearch = debounce((term) => {
     dispatch(loadCharacters(term));
-  }, 3500); // Adjust debounce delay as needed
+  }, 3500); // Adjust delay 
 
   useEffect(() => {
     debouncedSearch(searchTerm);
-    // Cleanup function to cancel debounce on component unmount
+    
+    
+
     return () => {
       debouncedSearch.cancel();
     };
@@ -67,7 +69,7 @@ const CharacterList = () => {
     ],
   };
 
-  // Handle the case where characters might be null or undefined
+//when searching for a character that doesn't exist it crashes the app because of NULL results
   const displayCharacters = characters || [];
 
   return (
